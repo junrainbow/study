@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="datasource.properties"></properties>
+    <settings>
+        <setting name="logImpl" value="log4j" />
+        <!-- 打开延迟加载 的开关 -->
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <!-- 将积极加载改为消极加载即按需要加载（同层属性一起加载） -->
+        <setting name="aggressiveLazyLoading" value="false"/>
+        <!-- 开启二级缓存 -->
+        <!--<setting name="cacheEnabled" value="true"/>-->
+    </settings>
+    <typeAliases>
+        <typeAlias type="com.jun.po.RoleEntity" alias="role"/>
+        <typeAlias type="com.jun.po.UserEntity" alias="user"/>
+        <typeAlias type="com.jun.po.IdCardEntity" alias="idcard"/>
+        <typeAlias type="com.jun.po.FriendEntity" alias="friend"/>
+        <typeAlias type="com.jun.po.IdCardTypeEntity" alias="idcardtype"/>
+    </typeAliases>
+    <typeHandlers>
+        <typeHandler handler="com.jun.mapper.type.handler.StringTypeHandler"/>
+    </typeHandlers>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC" />
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}" />
+                <property name="url" value="${jdbc.url}" />
+                <property name="username" value="${jdbc.username}" />
+                <property name="password" value="${jdbc.password}" />
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="com/jun/mapper/RoleMapper.xml"/>
+        <mapper resource="com/jun/mapper/UserMapper.xml"/>
+        <mapper resource="com/jun/mapper/IdCardMapper.xml"/>
+        <mapper resource="com/jun/mapper/FriendMapper.xml"/>
+        <mapper resource="com/jun/mapper/IdCardTypeMapper.xml"/>
+    </mappers>
+</configuration>

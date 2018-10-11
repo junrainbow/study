@@ -1,0 +1,17 @@
+com\jun\po\FriendEntity.class
+com\jun\mapper\UserMapper.class
+com\jun\po\IdCardTypeEntity.class
+com\jun\mapper\UserRoleMapper.class
+com\jun\po\IdCardEntity.class
+com\jun\mapper\RoleMapper.class
+com\jun\mapper\type\handler\StringTypeHandler.class
+com\jun\po\UserEntity.class
+com\jun\mapper\IdCardMapper.class
+com\jun\po\UserRoleEntity.class
+com\jun\build\DbUtils.class
+com\jun\mapper\IdCardTypeMapper.class
+com\jun\mapper\FriendMapper.class
+com\jun\test\Test.class
+com\jun\model\RoleModel.class
+com\jun\model\UserModel.class
+com\jun\po\RoleEntity.class
