@@ -29,7 +29,7 @@ target
 # Idea
 .idea
 *.iws
-*.iml
+
 *.ipr
 
 # git
