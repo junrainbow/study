@@ -36,6 +36,7 @@ public class DbUtils {
         }
     }
     public static SqlSession getSession(){
+        //master code
         return sessionFactory.openSession();
     }
 }
