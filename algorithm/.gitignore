@@ -34,9 +34,3 @@ target
 
 # git
 *.orig
-
-
-Project_Default.xml
-misc.xml
-modules.xml
-workspace.xml
