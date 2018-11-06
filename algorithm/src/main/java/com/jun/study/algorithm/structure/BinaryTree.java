@@ -1,4 +1,4 @@
-package com.jun.study.algorithm.search;
+package com.jun.study.algorithm.structure;
 
 import java.util.Stack;
 
@@ -90,15 +90,15 @@ public class BinaryTree {
         /**
          * 左节点
          */
-        Node left;
+        public Node left;
         /**
          * 右节点
          */
-        Node right;
+        public Node right;
         /**
          * 节点值
          */
-        int value;
+        public int value;
 
         public Node getLeft() {
             return left;

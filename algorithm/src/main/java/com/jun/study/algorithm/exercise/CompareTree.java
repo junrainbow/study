@@ -1,4 +1,6 @@
-package com.jun.study.algorithm.search;
+package com.jun.study.algorithm.exercise;
+
+import com.jun.study.algorithm.structure.BinaryTree;
 
 /**
  * @author junrainbow
@@ -12,7 +14,11 @@ public class CompareTree {
         //构建二叉树
         BinaryTree tree = new BinaryTree(12);
         //先序遍历
-        BinaryTraversal.dlr(tree.root);
+//        BinaryTraversal.dlr(tree.root);
+        //中序遍历
+//        BinaryTraversal.ldr(tree.root);
+        //后序遍历
+//        BinaryTraversal.lrd(tree.root);
     }
 
 }

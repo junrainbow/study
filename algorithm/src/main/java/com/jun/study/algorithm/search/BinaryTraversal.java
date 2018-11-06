@@ -1,5 +1,7 @@
 package com.jun.study.algorithm.search;
 
+import com.jun.study.algorithm.structure.BinaryTree;
+
 /**
  * @author junrainbow
  * @Description 二叉树遍历
@@ -7,9 +9,12 @@ package com.jun.study.algorithm.search;
  */
 public class BinaryTraversal {
 
-
+    /**
+     * 先序遍历
+     * @param root
+     */
     public static void dlr(BinaryTree.Node root){
-        //先根
+        //打印
         System.out.println(root.value);
         //递归左
         if(root.left!=null){
@@ -19,6 +24,41 @@ public class BinaryTraversal {
         if(root.right!=null){
             dlr(root.right);
         }
+    }
+
+    /**
+     * 中序遍历
+     * @param root
+     */
+    public static void ldr(BinaryTree.Node root){
+        //递归左
+        if(root.left!=null){
+            ldr(root.left);
+        }
+        //打印
+        System.out.println(root.value);
+        //递归右
+        if(root.right!=null){
+            ldr(root.right);
+        }
+    }
+
+    /**
+     * 后序遍历
+     * @param root
+     */
+    public static void lrd(BinaryTree.Node root){
+        //递归左
+        if(root.left!=null){
+            lrd(root.left);
+        }
+        //递归右
+        if(root.right!=null){
+            lrd(root.right);
+        }
+        //打印
+        System.out.println(root.value);
+
     }
 
 
