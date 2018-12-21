@@ -1,6 +1,6 @@
 package com.jun.study.algorithm.search;
 
-import com.jun.study.algorithm.structure.BinaryTree;
+import com.jun.study.algorithm.tree.TreeNode;
 
 /**
  * @author junrainbow
@@ -13,7 +13,7 @@ public class BinaryTraversal {
      * 先序遍历
      * @param root
      */
-    public static void dlr(BinaryTree.Node root){
+    public static void dlr(TreeNode root){
         //打印
         System.out.println(root.value);
         //递归左
@@ -30,7 +30,7 @@ public class BinaryTraversal {
      * 中序遍历
      * @param root
      */
-    public static void ldr(BinaryTree.Node root){
+    public static void ldr(TreeNode root){
         //递归左
         if(root.left!=null){
             ldr(root.left);
@@ -47,7 +47,7 @@ public class BinaryTraversal {
      * 后序遍历
      * @param root
      */
-    public static void lrd(BinaryTree.Node root){
+    public static void lrd(TreeNode root){
         //递归左
         if(root.left!=null){
             lrd(root.left);

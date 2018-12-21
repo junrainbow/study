@@ -11,7 +11,7 @@ import com.alibaba.fastjson.JSON;
  */
 public class InsertSort {
 
-//    public static void main(String[] args) throws Exception {
+//    public static void main(CustomerString[] args) throws Exception {
 //        int[] arry = {9,3,1,4,2,7,8,6,5};
 //
 //        for (int i = 1; i < arry.length; i++) {

@@ -1,9 +1,16 @@
 package com.jun.study.algorithm.exercise;
 
+import com.alibaba.fastjson.JSON;
 import com.jun.study.algorithm.classic.Calc;
+import com.jun.study.algorithm.match.KMP;
+import com.jun.study.algorithm.search.BinaryTraversal;
+import com.jun.study.algorithm.string.CustomerString;
 import com.jun.study.algorithm.structure.CircularQueueForArray;
 import com.jun.study.algorithm.structure.CircularQueueForLink;
+import com.jun.study.algorithm.tree.BuildTree;
+import com.jun.study.algorithm.tree.TreeNode;
 
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -16,18 +23,60 @@ public class ExerciseMain {
     public static void main(String[] args) throws Exception {
 
         //测试四则计算器
-        calc();
+//        calc();
 
         //循环队列（数组版）
-        circularQueueForArray();
+//        circularQueueForArray();
 
         //循环队列（链表版）
-        circularQueueForLink();
+//        circularQueueForLink();
+
+        //首次匹配子串位置
+//        firstIndexof();
+
+        //所有匹配子串位置
+//        indexof();
+
+        //KMP首次匹配
+//       firstIndexofByKMP();
+
+        //KMP所有匹配
+//       indexofByKMP();
 
 
-
+        //构建前序二叉树
+        String input = "ab#d##c";
+        BuildTree tree = new BuildTree(input);
+        TreeNode parentNode = tree.buildBydlr();
+        //先序遍历
+        BinaryTraversal.dlr(parentNode);
 
     }
+
+    private static void indexofByKMP() {
+        KMP kmp = new KMP("ababababcaabababca","abababca");
+        List<Integer> matchIdxs = kmp.indexof();//所有匹配位置
+        System.out.println(JSON.toJSONString(matchIdxs));
+    }
+
+    private static void firstIndexofByKMP() {
+        KMP kmp = new KMP("ababababcaabababca","abababca");
+        int matchIdx = kmp.firstIndexof();//获得匹配起始位置
+        System.out.println(matchIdx);
+    }
+
+    private static void firstIndexof() {
+        CustomerString s1 = new CustomerString("abCDEfgCDEsdfCDEe");
+        int idx = s1.firstIndexOf("CDE");
+        System.out.println("首个匹配结果："+idx);
+    }
+
+    private static void indexof() {
+        CustomerString s2 = new CustomerString("abCDEfgCDEsdfCDEe");
+        List<Integer> idxs = s2.indexOf("CDE");
+        System.out.println("所有匹配结果："+ JSON.toJSONString(idxs));
+    }
+
 
     /**
      * 循环队列（链表版）

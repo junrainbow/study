@@ -13,7 +13,7 @@ public class BubbleSort {
      * @param args
      * @throws Exception
      */
-//    public static void main(String[] args) throws Exception {
+//    public static void main(CustomerString[] args) throws Exception {
 //        int[] arry = {2,33,99,0,87,671,2889,3,4};
 //
 //

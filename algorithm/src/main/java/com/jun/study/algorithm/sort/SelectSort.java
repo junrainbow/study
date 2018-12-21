@@ -9,7 +9,7 @@ import com.alibaba.fastjson.JSON;
  */
 public class SelectSort {
 
-//    public static void main(String[] args) throws Exception {
+//    public static void main(CustomerString[] args) throws Exception {
 //        int[] array = {100,1,2,5,7,22,3333,423,6,7,1};
 //
 //        for (int i = 0; i < array.length - 1; i++) {
